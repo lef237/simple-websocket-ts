@@ -1,0 +1,14 @@
+{
+  "name": "bun-client",
+  "module": "client.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
