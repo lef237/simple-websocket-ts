@@ -2,6 +2,8 @@
 シンプルなWebSocketのTypeScriptコード
 
 ## 使い方
+あらかじめそれぞれのディレクトリで`npm install`を実行してください。
+
 ### サーバーを起動します。
 ```
 npx ts-node server.ts
