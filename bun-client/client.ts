@@ -20,13 +20,13 @@ function promptInput() {
       ws.close();
     } else {
       ws.send(message);
-      promptInput();
     }
   });
 }
 
 ws.onmessage = (e) => {
   console.log(`Received: ${e.data}`);
+  promptInput();
 };
 
 ws.onerror = (error) => {
