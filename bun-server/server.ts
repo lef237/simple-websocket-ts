@@ -9,7 +9,7 @@ Bun.serve({
     }
     return new Response("Upgrade failed :(", { status: 500 });
   },
-  port: port,
+  port,
   websocket: {
     message(ws, message) {
       console.log(`Received message => ${message}`);
