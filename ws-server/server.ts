@@ -6,12 +6,12 @@ const server = new Server({ port });
 console.log(`WebSocket Server is running on port ${port}`);
 
 server.on("connection", (ws) => {
-  ws.on("message", (message) => {
-    console.log(`Received message => ${message}`);
-    ws.send(`Hello, Client! Your message was: ${message}`); // クライアントに応答を送信
-  });
+	ws.on("message", (message) => {
+		console.log(`Received message => ${message}`);
+		ws.send(`Hello, Client! Your message was: ${message}`); // クライアントに応答を送信
+	});
 
-  ws.on("close", () => {
-    console.log("Client has disconnected");
-  });
+	ws.on("close", () => {
+		console.log("Client has disconnected");
+	});
 });

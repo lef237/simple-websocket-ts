@@ -45,6 +45,21 @@ Connected to the server.
 Enter message to send: ←ここで文字を入力してEnterをすると……！？
 ```
 
+## FormatとLintをしたいとき
+### Node.jsのディレクトリ
+```
+cd {ディレクトリ}
+npx @biomejs/biome format --write {ファイル名}
+npx @biomejs/biome lint {ファイル名}
+```
+
+### Bunのディレクトリ
+```
+cd {ディレクトリ}
+bunx @biomejs/biome format --write {ファイル名}
+bunx @biomejs/biome lint {ファイル名}
+```
+
 ### 終了します。
 ターミナルに入力してエンターキーを押してください。
 `exit`を入力するか、`Ctrl + C`で終了します。

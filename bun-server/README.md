@@ -12,4 +12,17 @@ To run:
 bun run server.ts
 ```
 
+To format:
+
+```bash
+bunx @biomejs/biome format --write server.ts
+```
+
+To lint:
+
+```bash
+bunx @biomejs/biome lint server.ts 
+
+```
+
 This project was created using `bun init` in bun v1.0.11. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
