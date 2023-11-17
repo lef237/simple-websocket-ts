@@ -9,26 +9,28 @@ Bunを使う場合は、[Installation | Bun Docs](https://bun.sh/docs/installati
 ### サーバーを起動します。
 Node.jsのサーバーを起動する場合
 ```
-cd ws-server
+cd node-websocket
 npx ts-node server.ts
 ```
 
 Bunのサーバーを起動する場合
 ```
-cd bun-server
+cd bun-websocket
 bun run server.ts
 ```
 
 ### クライアントを起動します。
+サーバーを起動した状態のまま、別のターミナルでクライアントを起動します。
+
 Node.jsのクライアントを起動する場合
 ```
-cd ws-client
+cd node-websocket
 npx ts-node client.ts
 ```
 
 Bunのクライアントを起動する場合
 ```
-cd bun-client
+cd bun-websocket
 bun run client.ts
 ```
 
@@ -48,16 +50,16 @@ Enter message to send: ←ここで文字を入力してEnterをすると……�
 ## FormatとLintをしたいとき
 ### Node.jsのディレクトリ
 ```
-cd {ディレクトリ}
-npx @biomejs/biome format --write {ファイル名}
-npx @biomejs/biome lint {ファイル名}
+cd node-websocket
+npx @biomejs/biome format --write .
+npx @biomejs/biome lint .
 ```
 
 ### Bunのディレクトリ
 ```
-cd {ディレクトリ}
-bunx @biomejs/biome format --write {ファイル名}
-bunx @biomejs/biome lint {ファイル名}
+cd bun-websocket
+bunx @biomejs/biome format --write .
+bunx @biomejs/biome lint .
 ```
 
 ### 終了します。

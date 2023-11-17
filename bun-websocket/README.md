@@ -1,4 +1,4 @@
-# bun-client
+# bun-server
 
 To install dependencies:
 
@@ -9,19 +9,21 @@ bun install
 To run:
 
 ```bash
+bun run server.ts
+# Start another one in another terminal
 bun run client.ts
 ```
 
 To format:
 
 ```bash
-bunx @biomejs/biome format --write client.ts
+bunx @biomejs/biome format --write server.ts client.ts
 ```
 
 To lint:
 
 ```bash
-bunx @biomejs/biome lint client.ts 
+bunx @biomejs/biome lint server.ts client.ts
 
 ```
 
