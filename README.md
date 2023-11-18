@@ -2,9 +2,14 @@
 シンプルなWebSocketのTypeScriptコード
 
 ## 使い方
-`ws-server`, `ws-client`のディレクトリで`npm install`を実行してください。
+### Nodeを使う場合
+`node-websocket`のディレクトリで`npm install`を実行してください。
 
-Bunを使う場合は、[Installation | Bun Docs](https://bun.sh/docs/installation) に従ってBunをインストールしてください。
+### Bunを使う場合
+
+[Installation | Bun Docs](https://bun.sh/docs/installation) に従ってBunをインストールしてください。
+
+`bun-websocket`のディレクトリで`bun install`を実行してください。
 
 ### サーバーを起動します。
 Node.jsのサーバーを起動する場合
