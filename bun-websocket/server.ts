@@ -1,5 +1,8 @@
+import { ServerWebSocket } from "bun";
+
 const port = 8080; // サーバーのポート番号
 console.log(`WebSocket Server is running on port ${port}`);
+const clients = new Set<ServerWebSocket>(); // 接続中のクライアントを格納するSet
 
 Bun.serve({
   fetch(req, server) {
@@ -11,12 +14,22 @@ Bun.serve({
   },
   port,
   websocket: {
-    message(ws, message) {
-      console.log(`Received message => ${message}`);
-      ws.send(`Hello, Client! Your message was: ${message}`); // クライアントに応答を送信
+    open(ws: ServerWebSocket) {
+      console.log("Client has connected");
+      clients.add(ws); // 新しいクライアントを追加
     },
-    close() {
+    message(_ws, message) {
+      console.log(`Received message => ${message}`);
+      // すべてのクライアントにメッセージをブロードキャスト
+      // Biomeに従った書き方
+      for (const client of clients) {
+        if (client.readyState !== WebSocket.OPEN) continue;
+        client.send(`\nClient said: ${message}`);
+      }
+    },
+    close(ws) {
       console.log("Client has disconnected");
+      clients.delete(ws); // クライアントが切断したら削除
     },
   },
 });
