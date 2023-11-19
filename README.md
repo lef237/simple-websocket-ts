@@ -1,4 +1,4 @@
-# simple-websocket-ts
+# simple-websocket-typescript
 シンプルなWebSocketのTypeScriptコード
 
 ## 使い方
