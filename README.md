@@ -52,6 +52,8 @@ Connected to the server.
 Enter message to send: ←ここで文字を入力してEnterをすると……！？
 ```
 
+一つのサーバーに対して複数のクライアントを接続できます。クライアントA→サーバー→クライアントBというメッセージの流れをぜひお試しください！
+
 ## FormatとLintをしたいとき
 ### Node.jsのディレクトリ
 ```
