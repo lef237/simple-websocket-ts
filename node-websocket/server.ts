@@ -1,7 +1,7 @@
-import { Server, WebSocket } from "ws";
+import { WebSocket, WebSocketServer } from "ws";
 
 const port = 8080; // サーバーのポート番号
-const server = new Server({ port });
+const server = new WebSocketServer({ port });
 const clients = new Set<WebSocket>(); // 接続中のクライアントを格納するSet
 
 console.log(`WebSocket Server is running on port ${port}`);
